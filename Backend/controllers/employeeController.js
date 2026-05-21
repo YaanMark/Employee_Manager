@@ -21,7 +21,16 @@ export const updateEmployee = (req, res) => {
     const { name, role, salary } = req.body;
     const sql = 'UPDATE employees SET name=?, role=?, salary=? WHERE id=?';
     db.query(sql, [name, role, salary, id], err => {
-        if(err) return res.status(500).json({erro: 'Failed to update an employee'});
+        if(err) return res.status(500).json({erro: 'Failed to update employee'});
         res.json({menssagem: 'Employee updated!'});
-    })
+    });
+}
+
+export const deleteEmployee = (req, res) => {
+    const { id } = req.params;
+    const sql = 'DELETE FROM employees WHERE id=?';
+    db.query(sql, [id], err => {
+        if(err) return res.status(500).json({erro: 'Failed to delete employee'});
+        res.json({menssagem: 'Employee deleted!'});
+    });
 }
