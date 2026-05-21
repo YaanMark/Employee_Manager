@@ -15,3 +15,13 @@ export const addEmployee = (req, res) => {
         res.json({mensagem: 'Employee created!'});
     });
 }
+
+export const updateEmployee = (req, res) => {
+    const { id } = req.params;
+    const { name, role, salary } = req.body;
+    const sql = 'UPDATE employees SET name=?, role=?, salary=? WHERE id=?';
+    db.query(sql, [name, role, salary, id], err => {
+        if(err) return res.status(500).json({erro: 'Failed to update an employee'});
+        res.json({menssagem: 'Employee updated!'});
+    })
+}
