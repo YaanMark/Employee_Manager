@@ -7,6 +7,7 @@ const app = express();
 //Middleware
 app.use(express.json());
 app.use('/employees', employeeRoutes);
+app.use(express.static('../Frontend/public'));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

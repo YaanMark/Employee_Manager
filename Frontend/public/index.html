@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+        <h1>Employee Manager</h1>
+        </header>
+        <section class="form-section">
+            <h2>Create / Update Employee</h2>
+            <form id="employeeForm">
+                <input type="hidden" id="id">
+                <input type="text" placeholder="Name" id="name">
+                <input type="text" placeholder="Role" id="role">
+                <input type="number" placeholder="Salary" id="salary">
+                <button type="submit">Save</button>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Employees List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Salary</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="employees-table"></tbody>
+            </table>
+        </section>
+        <footer>
+        <p>© 2026 Employees Manager | Developed by @YaanMark</p>
+        </footer>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
