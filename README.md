@@ -85,7 +85,7 @@ EMPLOYEE_MANAGEMENT
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/employee-manager.git
+git clone https://github.com/yaanmark/employee-manager.git
 ```
 
 ### 2. Navigate to the backend folder
